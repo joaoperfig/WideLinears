@@ -31,7 +31,7 @@ class WideDeep(nn.Module):
         lastsize = input_size
         for nextsize in (([hidden_size]*(depth)) + [output_size]):
 
-            linear = HiveLinear(beings, lastsize, nextsize)
+            linear = WideLinear(beings, lastsize, nextsize)
             linears += [linear]
             lastsize = nextsize
             
