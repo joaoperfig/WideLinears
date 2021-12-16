@@ -6,10 +6,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-# pointer to one line in hivelinear, behaves like normal linear module
-class LinearHivePointer(nn.Module):
+# pointer to one line in a widelinear, behaves like normal linear module
+class LinearWidePointer(nn.Module):
     def __init__(self, hive, being:int):
-        super(LinearHivePointer, self).__init__()
+        super(LinearWidePointer, self).__init__()
 
         self.hive = hive
         self.being = being
@@ -44,9 +44,9 @@ class LinearHivePointer(nn.Module):
         )
 
 # Family of separate Linear layers that run in parallel
-class HiveLinear(nn.Module):
+class WideLinear(nn.Module):
     def __init__(self, beings: int, input_size: int, output_size: int):
-        super(HiveLinear, self).__init__()
+        super(WideLinear, self).__init__()
 
         self.beings = beings
         self.input_size = input_size
@@ -90,8 +90,8 @@ class HiveLinear(nn.Module):
         self.bias.data[destination] = self.bias.data[source]
 
     # get module that behaves like single linear layer
-    def get_single(self, being: int) -> LinearHivePointer:
-        return LinearHivePointer(self, being)
+    def get_single(self, being: int) -> LinearWidePointer:
+        return LinearWidePointer(self, being)
 
     def extra_repr(self) -> str:
         return 'beings={}, in_features={}, out_features={}, bias={}'.format(
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     insize = 3
     outsize = 4
     batch = 2
-    hv = HiveLinear(beings, insize, outsize)
+    hv = WideLinear(beings, insize, outsize)
     print("Hive {}x {}->{}".format(beings, insize, outsize))
     input1 = torch.randn((insize))
     input2 = torch.randn((beings, insize))

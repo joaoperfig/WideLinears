@@ -8,9 +8,9 @@ from hivelinear import HiveLinear
 from hivelinear import LinearHivePointer
 
 # Family of separate deep NNs for very fast paralel forward passes
-class HiveDeep(nn.Module):
+class WideDeep(nn.Module):
     def __init__(self, beings: int, input_size: int, hidden_size: int, depth: int, output_size: int, non_linear=None, final_nl=None):
-        super(HiveDeep, self).__init__()
+        super(WideDeep, self).__init__()
 
         self.beings = beings
         self.input_size = input_size
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     hidden_size = 3
     depth = 2
     output_size = 4
-    hd = HiveDeep(beings, input_size, hidden_size, depth, output_size)
+    hd = WideDeep(beings, input_size, hidden_size, depth, output_size)
     print(hd)
     input = torch.randn((beings, input_size))
     output = hd(input)
