@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'widelinears',       
   packages = ['widelinears'],
-  version = '0.1',
+  version = '0.2',
   license='MIT',
   description = 'Parallel pytorch Neural Networks',   
   author = 'Joao Figueira',                  
