@@ -1,14 +1,14 @@
 from distutils.core import setup
 setup(
-  name = 'hivemind',       
-  packages = ['hivemind'],
+  name = 'widelinears',       
+  packages = ['widelinears'],
   version = '0.1',
   license='MIT',
   description = 'Parallel pytorch Neural Networks',   # Give a short description about your library
   author = 'Joao Figueira',                   # Type in your name
   author_email = 'joaoperfig@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/joaoperfig/HiveMind',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/joaoperfig/HiveMind/archive/v_01.tar.gz',    # I explain this later on
+  url = 'https://github.com/joaoperfig/WideLinears',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/joaoperfig/WideLinears/archive/v_01.tar.gz',    # I explain this later on
   keywords = ['pytorch', 'parallel', 'linear'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'torch',
