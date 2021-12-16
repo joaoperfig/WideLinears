@@ -42,7 +42,7 @@ WideDeep generalizes Deep Neural Networks using WideLinear layers, and simplifie
 - __beings__ (int): Number of parallel Deep NNs
 - __input_size__ (int): Size of input of each Deep NN
 - __hidden_size__ (int): Size of each hidden layer in each Deep NN
-- __depth__ (int): Number of hidden layers (if 0, there is a single Linear layer from input to output)
+- __depth__ (int): Number of hidden layers (if 1, there is a single Linear layer from input to output)
 - __output_size__ (int): Size of output of each Deep NN
 - __non_linear__ (optional function): Non Linearity function at each intermediate step (defaults to ReLU)
 - __final_nl__ (optional function): Non Linearity at output (defaults to sigmoid)
@@ -61,7 +61,7 @@ __Example architecture__ for parameters:
 - __beings__ = 4
 - __input_size__ = 5
 - __hidden_size__ = 3
-- __depth__ = 2
+- __depth__ = 3
 - __output_size__ = 4
 
 
