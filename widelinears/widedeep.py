@@ -4,8 +4,7 @@ from torch.nn import Linear
 from torch import Tensor
 import torch.nn as nn
 import torch.nn.functional as F
-from hivelinear import HiveLinear
-from hivelinear import LinearHivePointer
+from widelinear import WideLinear, LinearWidePointer
 
 # Family of separate deep NNs for very fast paralel forward passes
 class WideDeep(nn.Module):
