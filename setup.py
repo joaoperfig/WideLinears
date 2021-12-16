@@ -8,7 +8,7 @@ setup(
   author = 'Joao Figueira',                  
   author_email = 'joaoperfig@gmail.com',   
   url = 'https://github.com/joaoperfig/WideLinears', 
-  download_url = 'https://github.com/joaoperfig/WideLinears/archive/refs/tags/v_0.1.tar.gz',  
+  download_url = 'https://github.com/joaoperfig/WideLinears/archive/refs/tags/v_0.2.tar.gz',  
   keywords = ['pytorch', 'parallel', 'linear'], 
   install_requires=[          
           'torch',
