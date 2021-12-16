@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'widelinears',       
   packages = ['widelinears'],
-  version = '0.2',
+  version = '0.3',
   license='MIT',
   description = 'Parallel pytorch Neural Networks',   
   author = 'Joao Figueira',                  
   author_email = 'joaoperfig@gmail.com',   
   url = 'https://github.com/joaoperfig/WideLinears', 
-  download_url = 'https://github.com/joaoperfig/WideLinears/archive/refs/tags/v_0.2.tar.gz',  
+  download_url = 'https://github.com/joaoperfig/WideLinears/archive/refs/tags/v_0.3.tar.gz',  
   keywords = ['pytorch', 'parallel', 'linear'], 
   install_requires=[          
           'torch',
